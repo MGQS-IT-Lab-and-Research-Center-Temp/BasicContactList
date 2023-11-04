@@ -1,6 +1,10 @@
 ﻿using BasicContactList;
 
-Animal dog = new Dog();
+
+Menu menu = new Menu();
+menu.MyMenu();
+
+/*Animal dog = new Dog();
 var dogSound = dog.MakeSound();
 var dogMovement = dog.Movement();
 dog.SetName("Atlassian");
@@ -13,7 +17,7 @@ cat.SetName("Black Paw");
 string aboutCat = $"{cat.Name} makes {catSound} sound and make the {catMovement} movement";
 
 Console.WriteLine(aboutDog);
-Console.WriteLine(aboutCat);
+Console.WriteLine(aboutCat);*/
 
 // Contact contact = new();
 
