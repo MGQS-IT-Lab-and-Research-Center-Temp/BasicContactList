@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BasicContactList
+﻿namespace BasicContactList
 {
     public class Menu
     {
@@ -43,30 +37,30 @@ namespace BasicContactList
                             break;
                         case 1:
                             Console.Write("Enter contact name: ");
-                            var name = Console.ReadLine();
+                            var name = Console.ReadLine()!;
                             Console.WriteLine("Enter phone number: ");
-                            var phoneNumber = Console.ReadLine();
+                            var phoneNumber = Console.ReadLine()!;
                             Console.WriteLine("Enter email: ");
-                            var email = Console.ReadLine();
+                            var email = Console.ReadLine()!;
                             contactManager.AddContact(name, phoneNumber, email);
                             break;
                         case 2:
                             Console.Write("Enter phone number of the contact to delete: ");
-                            string phone = Console.ReadLine();
+                            string phone = Console.ReadLine()!;
                             contactManager.DeleteContact(phone);
                             break;
                         case 3:
                             Console.Write("Enter contact name: ");
-                            var nameToEdit = Console.ReadLine();
+                            var nameToEdit = Console.ReadLine()!;
                             Console.WriteLine("Enter phone number: ");
-                            var phoneToEdit = Console.ReadLine();
+                            var phoneToEdit = Console.ReadLine()!;
                             Console.WriteLine("Enter email: ");
-                            var emailToEdit = Console.ReadLine();
+                            var emailToEdit = Console.ReadLine()!;
                             contactManager.UpdateContact(phoneToEdit, nameToEdit, emailToEdit);
                             break;
                         case 4:
                             Console.Write("Enter phone number of contact to search:");
-                            var search = Console.ReadLine();
+                            var search = Console.ReadLine()!;
                             contactManager.GetContact(search);
                             break;
                         case 5:
