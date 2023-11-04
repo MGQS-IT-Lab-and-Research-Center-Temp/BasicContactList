@@ -1,19 +1,20 @@
 ﻿using BasicContactList;
 
-Animal dog = new Dog();
-var dogSound = dog.MakeSound();
-var dogMovement = dog.Movement();
-dog.SetName("Atlassian");
-string aboutDog = $"{dog.Name} makes {dogSound} sound and make the {dogMovement} movement";
 
-Animal cat = new Cat();
-var catSound = cat.MakeSound();
-var catMovement = cat.Movement();
-cat.SetName("Black Paw");
-string aboutCat = $"{cat.Name} makes {catSound} sound and make the {catMovement} movement";
+// Animal dog = new Dog();
+// var dogSound = dog.MakeSound();
+// var dogMovement = dog.Movement();
+// dog.SetName("Atlassian");
+// string aboutDog = $"{dog.Name} makes {dogSound} sound and make the {dogMovement} movement";
 
-Console.WriteLine(aboutDog);
-Console.WriteLine(aboutCat);
+// Animal cat = new Cat();
+// var catSound = cat.MakeSound();
+// var catMovement = cat.Movement();
+// cat.SetName("Black Paw");
+// string aboutCat = $"{cat.Name} makes {catSound} sound and make the {catMovement} movement";
+
+// Console.WriteLine(aboutDog);
+// Console.WriteLine(aboutCat);
 
 // Contact contact = new();
 
