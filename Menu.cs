@@ -28,6 +28,7 @@
                 Console.Clear();
                 PrintMenu();
                 int option;
+                
                 if (int.TryParse(Console.ReadLine(), out option))
                 {
                     switch (option)
@@ -85,8 +86,6 @@
         {
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
-
         }
-
     }
 }
