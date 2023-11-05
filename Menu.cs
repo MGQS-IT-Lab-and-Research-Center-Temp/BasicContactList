@@ -4,7 +4,7 @@
     {
         private readonly IContactManager contactManager;
 
-        public Menu() 
+        public Menu()
         {
             contactManager = new ContactManager();
         }
@@ -19,7 +19,7 @@
             Console.WriteLine("Enter 0 to Exit");
         }
 
-        public void MyMenu() 
+        public void MyMenu()
         {
             bool exit = false;
 
@@ -28,9 +28,9 @@
                 Console.Clear();
                 PrintMenu();
                 int option;
-                if(int.TryParse(Console.ReadLine(), out option))
+                if (int.TryParse(Console.ReadLine(), out option))
                 {
-                    switch(option)
+                    switch (option)
                     {
                         case 0:
                             exit = true;
@@ -38,11 +38,13 @@
                         case 1:
                             Console.Write("Enter contact name: ");
                             var name = Console.ReadLine()!;
-                            Console.WriteLine("Enter phone number: ");
+                            Console.Write("Enter phone number: ");
                             var phoneNumber = Console.ReadLine()!;
-                            Console.WriteLine("Enter email: ");
+                            Console.Write("Enter email: ");
                             var email = Console.ReadLine()!;
-                            contactManager.AddContact(name, phoneNumber, email);
+                            var contactTypeInt = Utility.SelectEnum("Select contact type:\n1 Family & Friends\n2 Work Or Business: ", 1, 2);
+                            var contactType = (ContactType)contactTypeInt;
+                            contactManager.AddContact(name, phoneNumber, email, contactType);
                             break;
                         case 2:
                             Console.Write("Enter phone number of the contact to delete: ");
@@ -66,10 +68,12 @@
                         case 5:
                             contactManager.GetAllContacts();
                             break;
-
+                        default:
+                            Console.WriteLine("Unknown operation!");
+                            break;
                     }
 
-                    if(!exit)
+                    if (!exit)
                     {
                         HoldScreen();
                     }
@@ -81,8 +85,8 @@
         {
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
-            
+
         }
-        
+
     }
 }
