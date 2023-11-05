@@ -79,7 +79,7 @@ namespace BasicContactList
 
             foreach (var contact in Contacts)
             {
-                table.AddRow(contact.Id, contact.Name, contact.PhoneNumber, contact.Email, contact.ContactType, contact.CreatedAt.ToShortDateString());
+                table.AddRow(contact.Id, contact.Name, contact.PhoneNumber, contact.Email, ((ContactType)contact.ContactType).Humanize(), contact.CreatedAt.ToShortDateString());
             }
 
             table.Write(Format.Alternative);
