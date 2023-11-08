@@ -1,4 +1,4 @@
 ﻿using BasicContactList;
 
-Menu menu = new Menu();
+Menu menu = new();
 menu.MyMenu();

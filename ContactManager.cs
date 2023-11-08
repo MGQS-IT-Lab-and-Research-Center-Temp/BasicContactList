@@ -53,6 +53,7 @@ namespace BasicContactList
         public void GetContact(string phoneNumber)
         {
             var contact = FindContact(phoneNumber);
+            
             if (contact is null)
             {
                 Console.WriteLine($"Contact with {phoneNumber} not found");
